@@ -1,9 +1,11 @@
 // Carregando módulos
-	const express = requerid('express');
-	const handlebars = requerid('express-handlebars');
-	const bodyParser = requerid('body-parser');
+	const express = require('express');
+	const handlebars = require('express-handlebars');
+	const bodyParser = require('body-parser');
 	const app = express();
-	//const mongoose = requerid('mongoose');
+	const config = require("./routes/config");
+	//const mongoose = require('mongoose');
+	const usuarios = require("./routes/usuario");
 
 // Configuracoes
 	// body parser
@@ -13,7 +15,11 @@
 		app.engine("handlebars", handlebars({defaultLayout: "main"}));	
 		app.set("view engine", "handlebars");
 	// mongoose	
+
 // Rotas
+	app.use('/', config);
+ 	app.use("/usuario", usuarios);
+
 
 // Outros
 const PORT = 3333;
