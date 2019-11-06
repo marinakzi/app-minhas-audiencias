@@ -15,5 +15,5 @@ const usuario = new Schema({
 		required: true
 	} 
 });
-
+ 
 mongoose.model("usuarios", usuario);

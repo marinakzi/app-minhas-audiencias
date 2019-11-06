@@ -8,6 +8,6 @@ router.get("/registro", (req,res)=>{
 	res.render("usuarios/registro");
 });
 
-
+  
 
 module.exports = router; 

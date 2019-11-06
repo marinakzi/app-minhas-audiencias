@@ -20,7 +20,7 @@
 	app.use('/', config);
  	app.use("/usuario", usuarios);
 
-
+ 
 // Outros
 const PORT = 3333;
 app.listen(PORT, ()=>{
